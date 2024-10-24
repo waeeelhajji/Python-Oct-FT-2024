@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    {% for i in range(number)  %}
+        {% if number < 3 %}
+        <p style="color: red;">Hello {{user_name}}</p>
+        {% else %}
+        <p style="color: blue;">Hello {{user_name}}</p>
+        {% endif %}
+    {% endfor %}
+</body>
+</html>
