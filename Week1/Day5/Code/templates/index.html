@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- POST Form (submit a message) -->
+     <form action="/submit2" method="POST">
+        <label for="user_name">Your name:</label>
+        <input type="text" name="user_name">
+        <label for="message">Your message:</label>
+        <input type="text" name="message">
+        <button>Submit</button>
+     </form>
+
+     <!-- Displaying messages stored in session -->
+     {% if session['messages'] %}
+        <h3>All Messages:</h3>
+        <ul>
+            {% for msg in session['messages'] %}
+                <li> {{msg}} </li>
+            {% endfor %}
+        </ul>
+     {% endif %}
+
+     <!-- button to clear session -->
+      <a href="/clear"> <button>Delete All</button> </a>
+</body>
+</html>
